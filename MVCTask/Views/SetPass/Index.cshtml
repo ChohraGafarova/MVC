@@ -1,0 +1,133 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@page "/set-password"
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+            background-image: radial-gradient(circle, #fff593, #ffe19a, #ffd1ac, #ffc7c1, #ffc2d1, #fcc0da, #f6bfe3, #edbfed, #e2bef3, #d5bef8, #c6befc, #b5bfff);
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            margin-left: 20%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 110px;
+            margin-top: 40px;
+        }
+
+            .logo-container img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            .logo-container span {
+                font-size: 30px;
+                font-weight: 600;
+                color: white;
+                text-shadow: 0 2px 10px rgba(63,63,62);
+                font-family: 'Comic Sans MS';
+            }
+
+        .set-password-container {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            overflow: hidden;
+        }
+        .set-password-form {
+            margin-top: 60px;
+            padding: 40px;
+            width: 400px;
+        }
+        .set-password-form h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        .set-password-form p {
+            margin-bottom: 40px;
+            color: #666;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .form-group input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .set-password-button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(81, 93, 239, 1);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .set-password-button:hover {
+                background: rgba(81, 93, 239, 1);
+            }
+        .set-password-image {
+            background-color: #f0f2f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://cdn-icons-png.freepik.com/512/187/187879.png" alt="Your Logo" />
+        <span>Lumeria</span>
+    </div>
+    <div class="set-password-container">
+        <div class="set-password-form">
+            <h2>Set a password</h2>
+            <p>Your previous password has been reset. Please set a new password for your account.</p>
+            <Form>
+                <div class="form-group">
+                    <label for="createPassword">Create Password</label>
+                    <input id="createPassword" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="reenterPassword">Re-enter Password</label>
+                    <input id="reenterPassword" type="password" class="form-control" />
+                </div>
+                <button type="submit" class="set-password-button">Set password</button>
+            </Form>
+        </div>
+        <div class="set-password-image">
+            <img src="https://www.logonbox.com/content/wp-content/uploads/2019/03/self-service-password-reset.jpg" alt="Set Password Illustration" style="border-radius: 10px; height: 526px;" />
+        </div>
+    </div>
+</body>
+</html>
+

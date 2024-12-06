@@ -1,0 +1,161 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@ 
+@page "/verify-code" 
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+            height: 100vh;
+            background-image: radial-gradient(circle, #93ffd0, #77f8e9, #72eefb, #84e2ff, #9ed5ff, #a7d3ff, #b0d0ff, #baceff, #b3d7ff, #afe0ff, #b0e8ff, #b5efff);
+            margin: 0;
+            flex-direction: column;
+            margin-left: 20%;
+        }
+
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            margin-top: 40px;
+        }
+
+            .logo-container img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            .logo-container span {
+                font-size: 30px;
+                font-weight: 600;
+                color: white;
+                text-shadow: 0 2px 10px rgba(63,63,62);
+                font-family: 'Comic Sans MS';
+            }
+
+        .verify-code-container {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            overflow: hidden;
+        }
+
+
+        .verify-code-form {
+            padding: 40px;
+            width: 400px;
+        }
+
+            .verify-code-form h2 {
+                margin-bottom: 10px;
+                font-size: 24px;
+                color: #333;
+                margin-top: 50px;
+            }
+
+            .verify-code-form p {
+                margin-bottom: 20px;
+                color: #666;
+                display:flex;
+            }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+            }
+
+            .form-group input {
+                width: 95%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+        .verify-code-button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(81, 93, 239, 1);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .verify-code-button:hover {
+                background: rgba(81, 93, 239, 1);
+            }
+
+        .verify-code-alt {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .verify-code-alt a {
+                color: #007bff;
+                text-decoration: none;
+                padding-left: 5px;
+            }
+
+                .verify-code-alt a:hover {
+                    text-decoration: underline;
+                }
+
+        .verify-code-image {
+            background-color: #f0f2f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://cdn-icons-png.freepik.com/512/187/187879.png" alt="Your Logo" />
+        <span>Lumeria</span>
+    </div>
+    <div class="verify-code-container">
+        <div class="verify-code-form">
+            <a href="/login" class="back-link">&lt; Back to login</a>
+            <h2>Verify code</h2>
+            <p>An authentication code has been sent to your email.</p>
+            <Form>
+                <div class="form-group">
+                    <label for="code">Enter Code</label>
+                    <input type="text" id="code" class="form-control" />
+                </div>
+                <div class="verify-code-alt">
+                    <p>Didn't receive a code? <a href="#">Resend</a></p>
+                </div>
+                <button type="submit" class="verify-code-button">Verify</button>
+            </Form>
+            
+        </div>
+        <div class="verify-code-image">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/004/991/265/small_2x/identity-biometric-verification-free-vector.jpg" alt="Verify Code Illustration" />
+        </div>
+    </div>
+</body>
+</html>
+
